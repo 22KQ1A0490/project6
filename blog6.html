@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>video example</title>
+</head>
+<h1>Videos About Vyshu's Resort</h1>
+<script>
+video_count =1;
+videoPlayer = document.getElementById("ss");
+video=document.getElementById("myVideo");
+
+function run(){
+        video_count++;
+        //alert(video_count);
+        if (video_count == 4) video_count = 1;
+        var nextVideo = "video/video"+video_count+".mp4";
+        //videoPlayer.src = nextVideo;
+        alert(nextVideo);
+        videoPlayer.setAttribute("src", nextVideo[video_count]);
+        videoPlayer.play();
+   }
+videoPlayer.onended(function(e) {
+     if (!e) {
+        e = window.event;
+    } 
+ run();
+};
+</script>
+<body onload="run();">
+    <embed src="c:\Users\91938\Downloads\-1440665510.mp4" width="400" height="400"> </embed>
+    <embed src="c:\Users\91938\Downloads\instavideo2.mp4" width="400" height="400"> </embed>
+    <embed src="c:\Users\91938\Downloads\instavideo3.mp4" width="400" height="400"> </embed>
+    <embed src="c:\Users\91938\Downloads\instavideo4.mp4" width="400" height="400"> </embed>
+    
+</body>
+</html>
